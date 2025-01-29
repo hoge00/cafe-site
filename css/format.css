@@ -73,23 +73,6 @@ h1 span{
 	padding: 0;
 }
 
-.aboutSection li{
-	float: left;
-	list-style: none;
-	width: 32%;
-	margin-right: 2%;
-}
-
-.aboutSection li:last-child{
-	margin-right: 0;
-}
-
-
-.aboutSection li img{
-	width: 100%;
-    height:auto ;
-}
-
 .aboutSection h3{
 	font-size: 25px;
 	font-family: 'Oswald', sans-serif;
@@ -151,3 +134,23 @@ h1 span{
 	font-size: 11px;
 
 }
+
+.aboutSection ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3列のグリッドにする */
+    gap: 20px; /* 画像間の間隔を指定 */
+}
+
+.aboutSection ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutSection ul li img {
+    width: 100%; /* 幅を100%に */
+    height: 200px; /* 高さを固定して正方形に */
+    object-fit: cover; /* 画像が枠にぴったりフィット */
+    border-radius: 8px; /* 角を少し丸くする場合 */
+}
+
